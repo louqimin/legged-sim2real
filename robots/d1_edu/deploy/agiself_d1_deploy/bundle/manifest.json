@@ -1,0 +1,41 @@
+{
+  "robot": "d1_edu",
+  "generated_by": "AGIself_make_bundle.py",
+  "created_local": "2026-08-30T21:24:49+08:00",
+  "source_run_dir": "logs/rsl_rl/agiself_d1_edu_flat/2026-08-30_20-53-42",
+  "contracts_dir": "docs/contracts",
+  "git": {
+    "commit": "3d415921b2e2d65ad6d25f31653d76a55f804cd2",
+    "dirty": true
+  },
+  "names": {
+    "policy": "policy.onnx",
+    "obs_contract": "d1_edu_obs_contract.json",
+    "joint_map": "d1_edu_joint_map.json",
+    "policy_ref_pt": "policy.pt"
+  },
+  "files": {
+    "policy.onnx": {
+      "sha256": "25263af5fe10021ab95d58ea10ed03bac85c445642a8621fc919e7149729d3a4",
+      "bytes": 162985,
+      "source": "logs/rsl_rl/agiself_d1_edu_flat/2026-08-30_20-53-42/exported/policy.onnx"
+    },
+    "policy.pt": {
+      "sha256": "884200a0589c5489fba70ec355e215c1ce2aeba591510dd4c615ee070443e2fa",
+      "bytes": 173868,
+      "source": "logs/rsl_rl/agiself_d1_edu_flat/2026-08-30_20-53-42/exported/policy.pt"
+    },
+    "d1_edu_obs_contract.json": {
+      "sha256": "0c8a99e728163a61554b57ecb431d97b2d47fae44297881efec3e10804442a56",
+      "bytes": 5838,
+      "source": "docs/contracts/d1_edu_obs_contract.json"
+    },
+    "d1_edu_joint_map.json": {
+      "sha256": "6a0cb035a2afbe20c7257dd7731405b23e13f5a029fd4b5bf5c01136388f36a8",
+      "bytes": 6054,
+      "source": "docs/contracts/d1_edu_joint_map.json"
+    }
+  },
+  "note": "R16: kp 50->20 / kd 1.4->0.5 / 后腿HIP 1.2->0.8 / 撤销R8-R14全部补丁 / feet_slide -0.25。D38 销账，四腿正常步态 duty 0.56~0.74",
+  "warning": "禁止手工编辑本目录下任何文件；要换策略就重跑 AGIself_make_bundle.py。"
+}

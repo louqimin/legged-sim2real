@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agiself-d1-deploy"
+version = "0.1.0"
+description = "D1 edu 四足 · PPO locomotion 部署侧运行时（零 Isaac Lab、零 torch）"
+requires-python = ">=3.8"
+
+dependencies = [
+    "numpy>=1.20",
+    "onnxruntime>=1.12",
+]
+
+[project.optional-dependencies]
+refcheck = ["torch>=2.0"]
+
+[tool.setuptools.packages.find]
+include = ["agiself_d1_deploy*"]
+
+[tool.setuptools.package-data]
+agiself_d1_deploy = ["bundle/*"]

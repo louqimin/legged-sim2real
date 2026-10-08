@@ -1,0 +1,269 @@
+{
+  "robot": "d1_edu",
+  "generated_by": "verify_contract.py",
+  "note": "本文件由脚本生成，禁止手工编辑；改了来源就重跑脚本。",
+  "sources": {
+    "isaac_json": {
+      "path": "docs/contracts/d1_edu_isaac_joint_order.json",
+      "sha256_16": "4cf2b6dd37d13b8c"
+    },
+    "urdf_json": {
+      "path": "robots/d1_edu/assets/urdf_doctor_report.json",
+      "sha256_16": "6919add44c3d7e71"
+    },
+    "sdk_header": {
+      "path": "~/self-AGI/agibot_D1_Edu-Ultra/include/lowlevel/lowlevel.h",
+      "sha256_16": "cbf47bc3434d8f7a"
+    }
+  },
+  "sdk_layout": {
+    "packed": true,
+    "joint_control_t_bytes": 20,
+    "leg_control_t_bytes": 84,
+    "spline_cmd_data_t_bytes": 344,
+    "joint_control_field_offsets": {
+      "p_des": 0,
+      "v_des": 4,
+      "kp": 8,
+      "kd": 12,
+      "t_ff": 16
+    },
+    "leg_control_field_offsets": {
+      "abad": 0,
+      "hip": 20,
+      "knee": 40,
+      "foot": 60,
+      "flags": 80
+    },
+    "leg_enum": {
+      "LEG_FRONT_LEFT": 1,
+      "LEG_FRONT_RIGHT": 0,
+      "LEG_BACK_LEFT": 3,
+      "LEG_BACK_RIGHT": 2
+    },
+    "flags_must_be": 1,
+    "foot_slot_policy": "固定关节，无电机；整槽 20 字节必须显式清零，否则后续腿数据整体错位"
+  },
+  "joint_names_isaac_order": [
+    "FL_ABAD_JOINT",
+    "FR_ABAD_JOINT",
+    "RL_ABAD_JOINT",
+    "RR_ABAD_JOINT",
+    "FL_HIP_JOINT",
+    "FR_HIP_JOINT",
+    "RL_HIP_JOINT",
+    "RR_HIP_JOINT",
+    "FL_KNEE_JOINT",
+    "FR_KNEE_JOINT",
+    "RL_KNEE_JOINT",
+    "RR_KNEE_JOINT"
+  ],
+  "mapping": [
+    {
+      "isaac_index": 0,
+      "joint_name": "FL_ABAD_JOINT",
+      "leg_code": "FL",
+      "leg_enum": "LEG_FRONT_LEFT",
+      "leg_index": 1,
+      "sdk_field": "abad",
+      "sdk_expr": "legs[1].abad",
+      "byte_offset": {
+        "p_des": 84,
+        "v_des": 88,
+        "kp": 92,
+        "kd": 96,
+        "t_ff": 100
+      }
+    },
+    {
+      "isaac_index": 1,
+      "joint_name": "FR_ABAD_JOINT",
+      "leg_code": "FR",
+      "leg_enum": "LEG_FRONT_RIGHT",
+      "leg_index": 0,
+      "sdk_field": "abad",
+      "sdk_expr": "legs[0].abad",
+      "byte_offset": {
+        "p_des": 0,
+        "v_des": 4,
+        "kp": 8,
+        "kd": 12,
+        "t_ff": 16
+      }
+    },
+    {
+      "isaac_index": 2,
+      "joint_name": "RL_ABAD_JOINT",
+      "leg_code": "RL",
+      "leg_enum": "LEG_BACK_LEFT",
+      "leg_index": 3,
+      "sdk_field": "abad",
+      "sdk_expr": "legs[3].abad",
+      "byte_offset": {
+        "p_des": 252,
+        "v_des": 256,
+        "kp": 260,
+        "kd": 264,
+        "t_ff": 268
+      }
+    },
+    {
+      "isaac_index": 3,
+      "joint_name": "RR_ABAD_JOINT",
+      "leg_code": "RR",
+      "leg_enum": "LEG_BACK_RIGHT",
+      "leg_index": 2,
+      "sdk_field": "abad",
+      "sdk_expr": "legs[2].abad",
+      "byte_offset": {
+        "p_des": 168,
+        "v_des": 172,
+        "kp": 176,
+        "kd": 180,
+        "t_ff": 184
+      }
+    },
+    {
+      "isaac_index": 4,
+      "joint_name": "FL_HIP_JOINT",
+      "leg_code": "FL",
+      "leg_enum": "LEG_FRONT_LEFT",
+      "leg_index": 1,
+      "sdk_field": "hip",
+      "sdk_expr": "legs[1].hip",
+      "byte_offset": {
+        "p_des": 104,
+        "v_des": 108,
+        "kp": 112,
+        "kd": 116,
+        "t_ff": 120
+      }
+    },
+    {
+      "isaac_index": 5,
+      "joint_name": "FR_HIP_JOINT",
+      "leg_code": "FR",
+      "leg_enum": "LEG_FRONT_RIGHT",
+      "leg_index": 0,
+      "sdk_field": "hip",
+      "sdk_expr": "legs[0].hip",
+      "byte_offset": {
+        "p_des": 20,
+        "v_des": 24,
+        "kp": 28,
+        "kd": 32,
+        "t_ff": 36
+      }
+    },
+    {
+      "isaac_index": 6,
+      "joint_name": "RL_HIP_JOINT",
+      "leg_code": "RL",
+      "leg_enum": "LEG_BACK_LEFT",
+      "leg_index": 3,
+      "sdk_field": "hip",
+      "sdk_expr": "legs[3].hip",
+      "byte_offset": {
+        "p_des": 272,
+        "v_des": 276,
+        "kp": 280,
+        "kd": 284,
+        "t_ff": 288
+      }
+    },
+    {
+      "isaac_index": 7,
+      "joint_name": "RR_HIP_JOINT",
+      "leg_code": "RR",
+      "leg_enum": "LEG_BACK_RIGHT",
+      "leg_index": 2,
+      "sdk_field": "hip",
+      "sdk_expr": "legs[2].hip",
+      "byte_offset": {
+        "p_des": 188,
+        "v_des": 192,
+        "kp": 196,
+        "kd": 200,
+        "t_ff": 204
+      }
+    },
+    {
+      "isaac_index": 8,
+      "joint_name": "FL_KNEE_JOINT",
+      "leg_code": "FL",
+      "leg_enum": "LEG_FRONT_LEFT",
+      "leg_index": 1,
+      "sdk_field": "knee",
+      "sdk_expr": "legs[1].knee",
+      "byte_offset": {
+        "p_des": 124,
+        "v_des": 128,
+        "kp": 132,
+        "kd": 136,
+        "t_ff": 140
+      }
+    },
+    {
+      "isaac_index": 9,
+      "joint_name": "FR_KNEE_JOINT",
+      "leg_code": "FR",
+      "leg_enum": "LEG_FRONT_RIGHT",
+      "leg_index": 0,
+      "sdk_field": "knee",
+      "sdk_expr": "legs[0].knee",
+      "byte_offset": {
+        "p_des": 40,
+        "v_des": 44,
+        "kp": 48,
+        "kd": 52,
+        "t_ff": 56
+      }
+    },
+    {
+      "isaac_index": 10,
+      "joint_name": "RL_KNEE_JOINT",
+      "leg_code": "RL",
+      "leg_enum": "LEG_BACK_LEFT",
+      "leg_index": 3,
+      "sdk_field": "knee",
+      "sdk_expr": "legs[3].knee",
+      "byte_offset": {
+        "p_des": 292,
+        "v_des": 296,
+        "kp": 300,
+        "kd": 304,
+        "t_ff": 308
+      }
+    },
+    {
+      "isaac_index": 11,
+      "joint_name": "RR_KNEE_JOINT",
+      "leg_code": "RR",
+      "leg_enum": "LEG_BACK_RIGHT",
+      "leg_index": 2,
+      "sdk_field": "knee",
+      "sdk_expr": "legs[2].knee",
+      "byte_offset": {
+        "p_des": 208,
+        "v_des": 212,
+        "kp": 216,
+        "kd": 220,
+        "t_ff": 224
+      }
+    }
+  ],
+  "isaac_index_to_leg_field": {
+    "0": "legs[1].abad",
+    "1": "legs[0].abad",
+    "2": "legs[3].abad",
+    "3": "legs[2].abad",
+    "4": "legs[1].hip",
+    "5": "legs[0].hip",
+    "6": "legs[3].hip",
+    "7": "legs[2].hip",
+    "8": "legs[1].knee",
+    "9": "legs[0].knee",
+    "10": "legs[3].knee",
+    "11": "legs[2].knee"
+  }
+}

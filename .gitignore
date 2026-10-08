@@ -1,0 +1,9 @@
+*
+!*/
+!.gitignore
+!*.md
+!*.py
+!*.toml
+!*.json
+!robots/d1_edu/deploy/agiself_d1_deploy/bundle/policy.onnx
+!robots/d1_edu/deploy/agiself_d1_deploy/bundle/policy.pt
