@@ -1,0 +1,1 @@
+占位文件：D1 URDF 不随仓库公开。请把厂家提供的整个 edu_description 目录放到 robots/d1_edu/assets/ 下替换本目录（网格按相对路径引用，目录结构不能拆）。
